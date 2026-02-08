@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | ZÉPHYR - L'énergie du vent réinventée</title>
+    <meta name="description" content="Contactez ZÉPHYR pour un devis personnalisé ou pour toute question sur notre éolienne hybride. Notre équipe vous répond sous 24h.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" href="img/favicon.ico">
+</head>
+<body>
+<!-- HEADER -->
+    <header>
+        <div class="container">
+           <a href="index.html" class="logo">
+    <img src="img/zephyr.png" alt="Logo ZÉPHYR - L'énergie du vent réinventée" class="logo-img">
+</a>
+
+            <nav aria-label="Navigation principale">
+                <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span class="hamburger"></span>
+    </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="product.html">Notre éolienne</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+
+                <button id="eco-mode" class="eco-btn" aria-label="Activer le mode éco-responsable">
+                    🌱 Mode Éco
+                </button> 
+            </nav>
+            <div class="nav-overlay"></div>
+        </div>
+    </header>
+
+    <main class="contact-page">
+<!-- HERO CONTACT -->
+        <section class="contact-hero section">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Contactez-nous</h1>
+                    <p class="section-subtitle">
+                        Vous avez des questions sur notre éolienne hybride ? Vous souhaitez un devis personnalisé ? 
+                        Notre équipe d'experts est à votre écoute.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+<!-- FORMULAIRE DE CONTACT -->
+        <section id="formulaire" class="contact-form-section section bg-light">
+            <div class="container">
+                <div class="form-container">
+                    <h2>Demandez un devis gratuit</h2>
+                    <p class="form-subtitle">Remplissez ce formulaire et nous vous recontacterons sous 24h.</p>
+                    
+                    <form id="contact-form" class="contact-form">
+<!-- Civilité -->
+                        <div class="form-group">
+                            <label class="form-label">Civilité *</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" name="gender" id="femme" value="Madame" required>
+                                    <label for="femme" class="radio-label">Madame</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" name="gender" id="homme" value="Monsieur" required>
+                                    <label for="homme" class="radio-label">Monsieur</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" name="gender" id="autre" value="Autre" required>
+                                    <label for="autre" class="radio-label">Autre</label>
+                                </div>
+                            </div>
+                        </div>
+
+<!-- Nom et Prénom -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="lastname" class="form-label">Nom *</label>
+                                <input type="text" name="lastname" id="lastname" class="form-input" placeholder="Dupont" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="firstname" class="form-label">Prénom *</label>
+                                <input type="text" name="firstname" id="firstname" class="form-input" placeholder="Martine" required>
+                            </div>
+                        </div>
+
+<!-- Email et Téléphone -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Adresse E-mail *</label>
+                                <input type="email" name="email" id="email" class="form-input" placeholder="martine.dupont@gmail.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phonenumber" class="form-label">Téléphone</label>
+                                <input type="tel" name="phonenumber" id="phonenumber" class="form-input" placeholder="01 23 45 67 89" pattern="^(\+33|0)[1-9](\d\d){4}$" required>
+                            </div>
+                        </div>
+<!-- Code postal -->
+                        <div class="form-group">
+                            <label for="postcode" class="form-label">Code postal</label>
+                            <input type="text" name="postcode" id="postcode" class="form-input" placeholder="75000" pattern="[0-9]{5}">
+                            <small class="form-hint">Pour une estimation précise de votre potentiel éolien</small>
+                        </div>
+
+<!-- Message -->
+                        <div class="form-group">
+                            <label for="message" class="form-label">Votre message *</label>
+                            <textarea name="message" id="message" class="form-textarea" placeholder="Bonjour, je souhaiterais obtenir des informations sur..." rows="6" required></textarea>
+                        </div>
+
+<!-- Sujet -->
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Sujet de votre demande</label>
+                            <select name="subject" id="subject" class="form-select">
+                                <option value="">Sélectionnez une option</option>
+                                <option value="devis">Demande de devis</option>
+                                <option value="info">Demande d'informations</option>
+                                <option value="technique">Question technique</option>
+                                <option value="installation">Installation</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+<!-- Boutons -->
+                        <div class="form-buttons">
+                            <button type="reset" class="btn btn-outline">Réinitialiser</button>
+                            <button type="submit" class="btn btn-primary">Envoyer ma demande</button>
+                        </div>
+                        
+                        <p class="form-legal">
+                            * Champs obligatoires. Vos données sont traitées conformément à notre 
+                            <a href="confidentialite.html">politique de confidentialité</a>.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+<!-- FAQ -->
+        <section id="faq" class="faq-section section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Questions fréquentes</h2>
+                    <p class="section-subtitle">
+                        Retrouvez les réponses aux questions les plus posées sur notre éolienne hybride.
+                    </p>
+                </div>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Quel est le délai d'installation d'une éolienne ZÉPHYR ?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>L'installation complète prend généralement 2 à 3 jours. Cela inclut le montage de l'éolienne, la connexion électrique et la configuration du système de suivi.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Quelle est la garantie sur l'éolienne ZÉPHYR ?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Nous offrons une garantie de 10 ans sur l'ensemble du système, incluant la structure, les pales et la batterie. L'onduleur est garanti 5 ans.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>L'éolienne fonctionne-t-elle par vent faible ?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Grâce à sa technologie hybride Savonius-Darrieus, notre éolienne démarre dès 2 m/s de vent (environ 7 km/h), ce qui lui permet de fonctionner même dans des zones peu ventées.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Faut-il un permis de construire ?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Pour les modèles résidentiels de moins de 12m de hauteur, aucune autorisation n'est généralement requise. Notre équipe vous accompagne dans les démarches si nécessaire.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Quelle maintenance est nécessaire ?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Une vérification annuelle est recommandée. Notre éolienne nécessite très peu d'entretien grâce à ses matériaux haute résistance et son système auto-nettoyant.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- COORDONNÉES -->
+        <section id="coordonnees" class="contact-info-section section bg-light">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Nos coordonnées</h2>
+                        <p>N'hésitez pas à nous contacter par téléphone ou email pour toute question.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">📧</div>
+                                <div>
+                                    <h3>Email</h3>
+                                    <p><a href="mailto:contact@zephyr-energie.fr">contact@zephyr-energie.fr</a></p>
+                                    <small>Réponse sous 24h</small>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">📞</div>
+                                <div>
+                                    <h3>Téléphone</h3>
+                                    <p><a href="tel:+33123456789">01 23 45 67 89</a></p>
+                                    <small>Lun-Ven : 9h-18h</small>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <div>
+                                    <h3>Adresse</h3>
+                                    <p>ZÉPHYR Énergie<br>Paris, France</p>
+                                    <small>Sur rendez-vous uniquement</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-map">
+                        <div class="map-placeholder">
+                            <div class="map-content">
+                                <h3>Notre siège social</h3>
+                                <p>📍 Paris, France</p>
+                                <small>Pour nous rendre visite, merci de prendre rendez-vous au préalable.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- CTA -->
+        <section class="cta-section section">
+            <div class="container">
+                <h2>Prêt à passer à l'énergie verte ?</h2>
+                <p>Contactez-nous pour une étude personnalisée et gratuite de votre projet</p>
+                <div class="cta-buttons">
+                    <a href="#formulaire" class="btn btn-primary btn-large">Demander un devis gratuit</a>
+                    <a href="#faq" class="btn btn-outline">Consulter la FAQ</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--Section réseaux sociaux -->
+<div class="social-networks">
+    <h3>Suivez-nous sur les réseaux</h3>
+    <p>@zephyr.off</p>
+    
+    <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram ZÉPHYR">
+            <img src="img/instagram.png" alt="Logo Instagram" class="social-icon">
+            <span>Instagram</span>
+        </a>
+        
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) ZÉPHYR">
+            <img src="img/x.png" alt="Logo X (Twitter)" class="social-icon">
+            <span>X (Twitter)</span>
+        </a>
+        
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook ZÉPHYR">
+            <img src="img/facebook.png" alt="Logo Facebook" class="social-icon">
+            <span>Facebook</span>
+        </a>
+    </div>
+</div>
+
+<!-- Pied de page : informations de contact, navigation secondaire, mentions légales et crédits -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>ZÉPHYR</h3>
+                <p>Innovation au service de la transition énergétique.</p>
+                <p class="eco-badge">🌱 Entreprise éco-responsable</p>
+                
+                <!-- Logo IUT -->
+                <div class="iut-logo">
+                    <img src="img/logo.png" alt="Logo IUT" class="iut-logo-img">
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="product.html">Notre éolienne</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Informations légales</h4>
+                <ul>
+ 
+                    <li><a href="confidentialite.html">Politique de confidentialité</a></li>       
+                    <li><a href="plansite.html">Plan du site</a></li>
+                    <li><a href="charte-graphique.html">Charte graphique</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <address>
+                    <p>📧 contact@zephyr-energie.fr</p>
+                    <p>📞 01 23 45 67 89</p>
+                    <p>📍 Paris, France</p>
+                    <p><small>Ce sont des informations fictives.</small></p>
+                </address>
+            </div>
+        </div>
+        
+        <!-- Signatures et copyright -->
+        <div class="footer-bottom">
+            <div class="signatures">
+                <p>Réalisé par : <strong>Maryam ADDOUN</strong> & <strong>Charlotte SAUNIER</strong></p>
+            </div>
+            <p>&copy; 2025 ZÉPHYR - Projet académique BUT Informatique - Tous droits réservés</p>
+        </div>
+    </div>
+</footer>
+<!-- BOUTON HAUT DE PAGE -->
+    <img id="back-to-top" src="img/fleche.png" alt="Retour en haut">
+
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

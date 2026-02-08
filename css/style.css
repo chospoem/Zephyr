@@ -1,0 +1,750 @@
+/* ===== VARIABLES CSS ===== */
+/* Définition des variables CSS pour la charte graphique du site ZÉPHYR */
+/* Ces variables permettent une maintenance facile des couleurs et dimensions */
+:root {
+    --primary: #1e88e5;        /* Bleu principal pour boutons et accents */
+    --primary-dark: #1565c0;   /* Version plus foncée du bleu pour hover */
+    --secondary: #26a69a;      /* Vert secondaire pour éléments complémentaires */
+    --dark: #263238;           /* Gris foncé pour textes principaux */
+    --light: #f5f7fa;          /* Gris clair pour fonds secondaires */
+    --text: #37474f;           /* Couleur de texte par défaut */
+    --border: #e0e0e0;         /* Couleur des bordures */
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Ombre douce pour cartes */
+    --radius: 8px;             /* Rayon de bordure pour éléments arrondis */
+}
+
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Défilement doux pour les ancres */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne et lisible */
+    line-height: 1.6; /* Améliore la lisibilité du texte */
+    color: var(--text); /* Couleur de texte par défaut */
+    background-color: #fff; /* Fond blanc pour le site */
+}
+
+.container {
+    width: 90%; /* Largeur responsive */
+    max-width: 1200px; /* Largeur maximale pour desktop */
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 0 20px; /* Espacement intérieur */
+}
+
+/* ===== HEADER ===== */
+/* Styles pour l'en-tête du site : logo, navigation et bouton mode éco */
+header {
+    background: white;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0;
+    border-bottom: none;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+/*  LOGO */
+.logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 110px;
+    width: auto;
+}
+
+
+
+.logo-title {
+    display: none;
+}
+
+.tagline {
+    display: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Menu de navigation principal */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-menu a[aria-current="page"] {
+    color: var(--primary);
+}
+
+.nav-menu a[aria-current="page"]::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+}
+
+.eco-btn {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.eco-btn:hover {
+    background: #1f8b7f;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+    min-height: 70vh;
+    padding: 2rem 0;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+/* ===== BOUTONS COMMUNS ===== */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn-primary {
+    background: var(--dark);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1c2833;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.btn-secondary {
+    background: var(--secondary);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #1f8b7f;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.btn-outline {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-large {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+/* ===== FOOTER ===== */
+/* Pied de page avec liens de navigation et informations légales */
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 3rem 0 1.5rem;
+    margin-top: 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col a {
+    color: #bdc3c7;
+    text-decoration: none;
+    display: block;
+    padding: 0.25rem 0;
+    transition: color 0.3s;
+}
+
+.footer-col a:hover {
+    color: white;
+}
+
+address p {
+    margin-bottom: 0.5rem;
+    font-style: normal;
+}
+
+.eco-badge {
+    color: var(--secondary);
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #95a5a6;
+    font-size: 0.9rem;
+}
+
+/* ===== SECTIONS GÉNÉRALES ===== */
+.section {
+    padding: 4rem 0;
+    margin-bottom: 0;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.section-badge {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+
+/* ===== CTA SECTION ===== */
+.cta-section {
+    text-align: center;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+/* ===== MODE ÉCO ===== */
+.eco-mode {
+    filter: grayscale(20%);
+}
+
+.eco-mode .avantage-card,
+.eco-mode .hero-section,
+.eco-mode .cta-section {
+    animation: none !important;
+}
+
+.eco-mode img {
+    filter: grayscale(30%);
+}
+
+/* ===== RESPONSIVE COMMUN ===== */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-actions,
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    header .container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    nav {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .eco-btn {
+        margin-top: 0.5rem;
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 1.2rem;
+    }
+    
+    .hero-section {
+        padding: 3rem 0;
+    }
+    
+    .section {
+        padding: 3rem 0;
+    }
+}
+/* ===== BOUTON HAUT DE PAGE (IMAGE SEULE) ===== */
+/* ===== BOUTON HAUT DE PAGE (IMAGE SEULE) ===== */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+
+    width: 48px;
+    height: auto;
+
+    cursor: pointer;
+    z-index: 1000;
+
+    background: none;
+    border: none;
+}
+
+/* Hover léger */
+#back-to-top:hover {
+    transform: translateY(-5px);
+    opacity: 0.85;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* ===== LOGO IUT DANS FOOTER ===== */
+.iut-logo-img {
+    max-width: 120px;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+/* ===== SIGNATURES ===== */
+.signatures {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.signatures p {
+    color: #bdc3c7;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.signatures strong {
+    color: white;
+    font-weight: 600;
+}
+/* ===== MENU BURGER ===== */
+.menu-toggle {
+    display: none; /* Caché sur desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1002; /* Augmente le z-index */
+    position: relative;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Les trois traits du burger */
+.hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--dark);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: var(--dark);
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    top: 8px;
+}
+
+/* Animation en croix quand ouvert */
+.menu-toggle.active .hamburger {
+    background: transparent;
+}
+
+.menu-toggle.active .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.menu-toggle.active .hamburger::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+/* SUR MOBILE SEULEMENT */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Visible sur mobile */
+    }
+    
+    .nav-menu {
+        display: flex !important; /* Force l'affichage */
+        position: fixed;
+        top: 0;
+        right: -100%; /* Caché à droite */
+        width: 280px;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        padding: 100px 30px 30px;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+        transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        z-index: 1001;
+        margin: 0;
+        gap: 10px;
+        overflow-y: auto;
+    }
+    
+    /* Menu ouvert */
+    .nav-menu.active {
+        right: 0 !important; /* Fait glisser depuis la droite */
+    }
+    
+    /* Overlay sombre derrière le menu */
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    
+    .nav-overlay.active {
+        display: block;
+        opacity: 1;
+    }
+    
+    /* Style des liens */
+    .nav-menu li {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .nav-menu a {
+        display: block;
+        padding: 15px 20px;
+        border-radius: 10px;
+        transition: all 0.3s;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--dark);
+        text-align: left;
+    }
+    
+    .nav-menu a:hover {
+        background: #f0f7ff;
+        transform: translateX(5px);
+    }
+    
+    .nav-menu a[aria-current="page"] {
+        background: var(--primary);
+        color: white !important;
+        font-weight: 600;
+    }
+    
+    /* Organisation du header sur mobile */
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 1rem 0;
+    }
+    
+    .logo {
+        flex: 1;
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        order: 2;
+    }
+    
+    #eco-mode {
+        order: 1;
+        margin: 0;
+    }
+}
+
+/* CHARTE GRAPHIQUE */
+.charte-hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.charte-hero h1 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.charte-hero .section-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.charte-content {
+    padding: 3rem 0;
+}
+
+.charte-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.charte-section {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.charte-section.small {
+    padding: 1rem;
+}
+
+.charte-section.large {
+    grid-column: span 1;
+}
+
+@media (min-width: 768px) {
+    .charte-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .charte-section.large {
+        grid-column: span 2;
+    }
+}
+
+.charte-section h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 0.5rem;
+}
+
+.colors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 480px) {
+    .colors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.color-item {
+    text-align: center;
+}
+
+.color-sample {
+    width: 100%;
+    height: 80px;
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+    border: 2px solid var(--border);
+}
+
+.color-info {
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.fonts-info {
+    margin-top: 1.5rem;
+}
+
+.font-item {
+    margin-bottom: 1.5rem;
+}
+
+.font-example {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background: var(--light);
+    border-radius: var(--radius);
+}
+
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.logo-item {
+    text-align: center;
+}
+
+.logo-display {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.charte-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.charte-section li {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.charte-section li:last-child {
+    border-bottom: none;
+}
+
+/* ===== BOUTON HAUT DE PAGE (IMAGE) ===== */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    left: auto; /*g enlever leventualité quil e ùmette a gauche*/
+
+    width: 48px;
+    height: 48px;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    z-index: 1000;
+    padding: 0;
+}
+
+#back-to-top img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#back-to-top:hover img {
+    transform: translateY(-5px);
+    opacity: 0.85;
+}
